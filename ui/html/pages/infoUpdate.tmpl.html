@@ -1,0 +1,107 @@
+{{ define "title" }}Info #{{ .Info.ID }}{{ end }}
+
+{{ define "nav" }}
+<nav id="navHome">
+  <div>
+  <a href="/"><img class="iconeWidth"
+                   src="/static/img/icone_maison.png"></a>
+  </div>
+  <div>
+    <a href="/source/{{ .Info.SourceID}}/info/view/{{ .Info.ID }}">
+      <img class="iconeWidth" src="/static/img/icone_fleche.png">
+    </a>
+  </div>
+</nav>
+{{ end }}
+
+{{ define "main" }}
+<div id="srcName">
+  <form action="/source/{{ .Info.SourceID }}/info/update/{{ .Info.ID }}"
+        method="POST">
+    <table>
+      <tr>
+        <th colspan="2">
+          Agent<span style="color: red">*</span>
+        </th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input value="{{ .Info.Agent }}" class="input"
+                 type="text" name="agent" autofocus required>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Material<span style="color: red">*</span>
+        </th>
+        <th class="center-text">
+          Details<span style="color: red">*</span>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <input class="input" value="{{ .Info.Material }}"
+                   type="text" name="material" required>
+          </div>
+        </td>
+        <td>
+          <textarea class="textarea" type="text" name="detail" required>{{ .Info.Detail }}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="center-text">
+          Priority<span style="color: red">*</span>
+        </th>
+        <th class="center-text">Estimate Price</th>
+      </tr>
+      <tr>
+        <td>
+          <input class="input" value="{{ .Info.Priority}}"
+                 type="text" name="priority" required>
+        </td>
+        <td>
+          <input class="input" value="{{ .Info.Estimate }}"
+                 type="text" name="estimate">
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <label>Status<span style="color: red">*</span></label>
+        </th>
+      <tr>
+
+      </tr>
+      <td colspan="2" class="control">
+        <label class="radio">
+          <input type="radio" name="status"
+                 value="waiting" checked>
+          waiting
+        </label>
+
+        <label class="radio">
+          <input type="radio" name="status"
+                 value="affected">
+          affected
+        </label>
+        <label class="radio">
+          <input type="radio" name="status"
+                 value="done">
+          done
+        </label>
+        <label class="radio">
+          <input type="radio" name="status"
+                 value="archived">
+          archived
+        </label>
+      </td>
+      </tr>
+      <th id="btnpad" colspan="2">
+        <button type="submit" class="button is-primary is-light is-medium blockmargin">Soumettre</button>
+      </th>
+      <span style="color: red">*</span>Required
+      </tr>
+    </table>
+  </form>
+</div>
+{{ end }}
