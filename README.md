@@ -5,8 +5,8 @@
 #### Description:
 CURATOR is meant to track and centralize defaults found while working.
 It's separated in 2 data types:
-    - Source (place)
-    - Infos
+- Source (place)
+- Infos
 
 The program is separated within 4 main folders:
 
