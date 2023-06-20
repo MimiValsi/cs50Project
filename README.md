@@ -1,4 +1,4 @@
-#CURATOR
+# CURATOR
 
 #### Video URL: https://youtu.be/Lsn1FYk7ycU
 
