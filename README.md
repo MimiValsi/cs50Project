@@ -1,6 +1,6 @@
 #CURATOR
 
-#### Video URL:
+#### Video URL: https://youtu.be/Lsn1FYk7ycU
 
 #### Description:
 CURATOR is meant to track and centralize defaults found while working.
